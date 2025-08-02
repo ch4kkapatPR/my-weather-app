@@ -19,10 +19,15 @@ body {
     border-radius: 1rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 400px;
+    max-width: 600px;
     text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
-h1 { color: #00A6FB; }
+h1 { 
+  color: #00A6FB;
+  text-shadow: 0 10px 25px black;
+}
 #search-form { display: flex; gap: 0.5rem; margin: 1.5rem 0; }
 #city-input {
     flex-grow: 1; padding: 0.75rem; border: 1px solid #006494;
@@ -42,5 +47,48 @@ h1 { color: #00A6FB; }
     margin: 0.5rem 0; 
     font-family: "Sriracha", cursive;
     font-weight: 400;
-    font-style: normal;}
+    font-style: normal;
+}
 .error { color: #ff4d4d; font-weight: bold; }
+
+#forecast-section {
+  display: none;
+  margin-top: 20px;
+}
+
+#forecast-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#forecast-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* If you want them to wrap */
+  gap: 10px;
+}
+
+.forecast-card {
+  flex: 1 1 100px; /* Allow wrapping while keeping width consistent */
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

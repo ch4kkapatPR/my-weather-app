@@ -10,13 +10,21 @@
     <div class="app-container">
         <h1>Weather App</h1>
         <form id="search-form">
-            <input type="text" id="city-input" placeholder="ค้นหาชื่อเมือง..." required>
-            <button type="submit">ค้นหา</button>
+            <input type="text" id="city-input" list="city-history" placeholder="Enter city..." required/>
+            <datalist id="city-history"></datalist>
+            <button type="submit">Search</button>
+
         </form>
         <div id="weather-info-container" class="weather-info">
             <!-- ข้อมูลสภาพอากาศจะแสดงที่นี่ -->
         </div>
+    <div id="forecast-section">
+        <h3>Forecast in the next 5 days</h3>
+    <div id="forecast-box">
+        <div id="forecast-container"></div>
     </div>
+    <div id="search-history" class="mt-4"></div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
